@@ -30,7 +30,7 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/atom.xml" title="阿哲の博客" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -554,119 +554,6 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2020/08/03/job-zi-yuan-dui-xiang/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                            
-                            <span class="card-title"></span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Job资源对象服务类的Pod容器：RC、RS、DS、Deployment.
-工作类的Pod容器：Job—&gt;执行一次，或者批量执行处理程序，完成之后推出容器。
-1234567891011121314151617181920[root@m
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-03
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                董炎哲
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2020/08/03/helm-zi-ding-yi-mo-ban/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                            
-                            <span class="card-title"></span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Helmcharts：包、relieases：实例。
-自定义模板开发自己的chart1[root@master ~]# helm create mychart
-
-调试chart
-1[root@master ~]# helm install 
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-03
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                董炎哲
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2020/08/03/doshboard/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                            
-                            <span class="card-title"></span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                一、k8s的UI访问界面-dashboard在dashboard中，虽然可以做到创建，删除，修改资源等操作，但通常情况下，我们会把它当作健康k8s集群的软件。
-1、到github上搜索dashboard
-基于token的方法登录dashbo
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-03
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                董炎哲
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
                     <a href="/2020/03/21/helm-ru-men/">
                         <div class="card-image">
                             
@@ -680,7 +567,9 @@
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                Helm1234567891011121314151617181920212223242526272829303132333435[root@master helm]# wget https:&#x2F;&#x2F;get.helm.sh&
+                                Helm[root@master helm]# wget https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz
+[root@master helm]# ls
+helm-v2.14.3-lin
                             
                         </div>
                         <div class="publish-info">
@@ -708,42 +597,6 @@
                         </a>
                         
                     </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2020/01/02/k8s-jia-gou-ji-ben-ming-ling/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                            
-                            <span class="card-title"></span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                架构kubectl：k8s是命令行端，用来发送客户的操作指令。
-*API server：是k8s集群的前端接口，各种客户端工具以及k8s的其他组件可以通过他管理k8s集群的各种资源。他提供了HTTP/HTTPS RESTful AIP，即k
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-02
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                董炎哲
-                                
-                            </span>
-                        </div>
-                    </div>
-
                     
                 </div>
             </div>

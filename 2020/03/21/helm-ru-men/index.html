@@ -30,7 +30,7 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 5.0.0"><link rel="alternate" href="/atom.xml" title="阿哲の博客" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -465,7 +465,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    854
+                    808
                 </div>
                 
 
@@ -477,32 +477,117 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Helm"><a href="#Helm" class="headerlink" title="Helm"></a>Helm</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">[root@master helm]# wget https:&#x2F;&#x2F;get.helm.sh&#x2F;helm-v2.14.3-linux-amd64.tar.gz</span><br><span class="line">[root@master helm]# ls</span><br><span class="line">helm-v2.14.3-linux-amd64.tar.gz</span><br><span class="line">[root@master helm]# tar -zxvf helm-v2.14.3-linux-amd64.tar.gz </span><br><span class="line">linux-amd64&#x2F;</span><br><span class="line">linux-amd64&#x2F;helm</span><br><span class="line">linux-amd64&#x2F;README.md</span><br><span class="line">linux-amd64&#x2F;LICENSE</span><br><span class="line">linux-amd64&#x2F;tiller</span><br><span class="line">[root@master helm]# ls</span><br><span class="line">helm-v2.14.3-linux-amd64.tar.gz  linux-amd64</span><br><span class="line">[root@master helm]# mv linux-amd64&#x2F;helm &#x2F;usr&#x2F;local&#x2F;bin&#x2F;</span><br><span class="line">[root@master helm]# chmod +x &#x2F;usr&#x2F;local&#x2F;bin&#x2F;helm </span><br><span class="line">[root@master helm]# helm help</span><br><span class="line">[root@master helm]# source &lt;(helm completion bash)</span><br><span class="line">&#x2F;&#x2F;将yaml文件导入</span><br><span class="line">[root@master helm]# kubectl apply -f tiller-rbac.yaml </span><br><span class="line">serviceaccount&#x2F;tiller created</span><br><span class="line">clusterrolebinding.rbac.authorization.k8s.io&#x2F;tiller created</span><br><span class="line">&#x2F;&#x2F;初始化</span><br><span class="line">[root@master helm]# helm init --service-account&#x3D;tiller</span><br><span class="line">&#x2F;&#x2F;添加国内heml仓库源</span><br><span class="line">[root@master helm]# helm repo list </span><br><span class="line">NAME      URL                                             </span><br><span class="line">stable    https:&#x2F;&#x2F;kubernetes-charts.storage.googleapis.com</span><br><span class="line">local     http:&#x2F;&#x2F;127.0.0.1:8879&#x2F;charts  </span><br><span class="line">[root@master helm]# helm repo add stable https:&#x2F;&#x2F;kubernetes.oss-cn-hangzhou.aliyuncs.com&#x2F;charts</span><br><span class="line">&quot;stable&quot; has been added to your repositories</span><br><span class="line">[root@master helm]# helm repo list </span><br><span class="line">NAME      URL                                                   </span><br><span class="line">stable    https:&#x2F;&#x2F;kubernetes.oss-cn-hangzhou.aliyuncs.com&#x2F;charts</span><br><span class="line">local     http:&#x2F;&#x2F;127.0.0.1:8879&#x2F;charts  </span><br><span class="line">[root@master helm]# helm version </span><br><span class="line">Client: &amp;version.Version&#123;SemVer:&quot;v2.14.3&quot;, GitCommit:&quot;0e7f3b6637f7af8fcfddb3d2941fcc7cbebb0085&quot;, GitTreeState:&quot;clean&quot;&#125;</span><br><span class="line">Server: &amp;version.Version&#123;SemVer:&quot;v2.14.3&quot;, GitCommit:&quot;0e7f3b6637f7af8fcfddb3d2941fcc7cbebb0085&quot;, GitTreeState:&quot;clean&quot;&#125;</span><br></pre></td></tr></table></figure>
-
-
-
+                <h3 id="Helm"><a href="#Helm" class="headerlink" title="Helm"></a>Helm</h3><pre><code>[root@master helm]# wget https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz
+[root@master helm]# ls
+helm-v2.14.3-linux-amd64.tar.gz
+[root@master helm]# tar -zxvf helm-v2.14.3-linux-amd64.tar.gz 
+linux-amd64/
+linux-amd64/helm
+linux-amd64/README.md
+linux-amd64/LICENSE
+linux-amd64/tiller
+[root@master helm]# ls
+helm-v2.14.3-linux-amd64.tar.gz  linux-amd64
+[root@master helm]# mv linux-amd64/helm /usr/local/bin/
+[root@master helm]# chmod +x /usr/local/bin/helm 
+[root@master helm]# helm help
+[root@master helm]# source &lt;(helm completion bash)
+//将yaml文件导入
+[root@master helm]# kubectl apply -f tiller-rbac.yaml 
+serviceaccount/tiller created
+clusterrolebinding.rbac.authorization.k8s.io/tiller created
+//初始化
+[root@master helm]# helm init --service-account=tiller
+//添加国内heml仓库源
+[root@master helm]# helm repo list 
+NAME      URL                                             
+stable    https://kubernetes-charts.storage.googleapis.com
+local     http://127.0.0.1:8879/charts  
+[root@master helm]# helm repo add stable https://kubernetes.oss-cn-hangzhou.aliyuncs.com/charts
+&quot;stable&quot; has been added to your repositories
+[root@master helm]# helm repo list 
+NAME      URL                                                   
+stable    https://kubernetes.oss-cn-hangzhou.aliyuncs.com/charts
+local     http://127.0.0.1:8879/charts  
+[root@master helm]# helm version 
+Client: &amp;version.Version&amp;#123;SemVer:&quot;v2.14.3&quot;, GitCommit:&quot;0e7f3b6637f7af8fcfddb3d2941fcc7cbebb0085&quot;, GitTreeState:&quot;clean&quot;&amp;#125;
+Server: &amp;version.Version&amp;#123;SemVer:&quot;v2.14.3&quot;, GitCommit:&quot;0e7f3b6637f7af8fcfddb3d2941fcc7cbebb0085&quot;, GitTreeState:&quot;clean&quot;&amp;#125;</code></pre>
 <h5 id="helm"><a href="#helm" class="headerlink" title="helm"></a>helm</h5><p>包管理工具：</p>
 <p>Charts：是一个helm的程序包，它包含了运行一个kubernetes应用程序所需要的镜像，依赖关系和资源定义等。</p>
 <p>Release：应用程序运行Charts字后，得到的一个实例。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;搜索包</span><br><span class="line">[root@master helm]# helm search </span><br><span class="line">&#x2F;&#x2F;搜索指定包</span><br><span class="line">[root@master helm]# helm search redis</span><br><span class="line">&#x2F;&#x2F;查看包的详细信息</span><br><span class="line">[root@master helm]# helm inspect stable&#x2F;redis</span><br><span class="line">&#x2F;&#x2F;部署一个实例，</span><br><span class="line">[root@master helm]# helm install stable&#x2F;redis -n redis --dry-run</span><br><span class="line">NAME:   redis</span><br><span class="line">    1、关于这个release的描述。</span><br><span class="line">    2、关于这个release资源的描述。</span><br><span class="line">    3、怎么使用这个release。</span><br></pre></td></tr></table></figure>
-
+<pre><code>//搜索包
+[root@master helm]# helm search 
+//搜索指定包
+[root@master helm]# helm search redis
+//查看包的详细信息
+[root@master helm]# helm inspect stable/redis
+//部署一个实例，
+[root@master helm]# helm install stable/redis -n redis --dry-run
+NAME:   redis
+    1、关于这个release的描述。
+    2、关于这个release资源的描述。
+    3、怎么使用这个release。</code></pre>
 <h3 id="helm部署安装一个Mysql服务"><a href="#helm部署安装一个Mysql服务" class="headerlink" title="helm部署安装一个Mysql服务"></a>helm部署安装一个Mysql服务</h3><p>Chart.yaml</p>
 <p>这个chart包的概要信息</p>
 <p>name和version这俩是必填项，其他可选。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@master mysql]# pwd</span><br><span class="line">&#x2F;root&#x2F;.helm&#x2F;cache&#x2F;archive&#x2F;mysql</span><br><span class="line">[root@master archive]# helm install stable&#x2F;mysql -n mysql</span><br><span class="line">[root@master archive]# ls</span><br><span class="line">mysql-0.3.5.tgz  redis  redis-1.1.15.tgz</span><br><span class="line">[root@master archive]# tar -zxvf mysql-0.3.5.tgz </span><br></pre></td></tr></table></figure>
-
+<pre><code>[root@master mysql]# pwd
+/root/.helm/cache/archive/mysql
+[root@master archive]# helm install stable/mysql -n mysql
+[root@master archive]# ls
+mysql-0.3.5.tgz  redis  redis-1.1.15.tgz
+[root@master archive]# tar -zxvf mysql-0.3.5.tgz </code></pre>
 <h5 id="README-md"><a href="#README-md" class="headerlink" title="README.md"></a>README.md</h5><p>是这个chart包的一个使用帮助文档</p>
 <h5 id="templates"><a href="#templates" class="headerlink" title="templates"></a>templates</h5><p>chart包内各种资源对象的模板。</p>
 <h5 id="values-yaml"><a href="#values-yaml" class="headerlink" title="values.yaml"></a>values.yaml</h5><p>是这个chart包的默认值，可以</p>
 <h3 id="helm部署安装一个mysql服务"><a href="#helm部署安装一个mysql服务" class="headerlink" title="helm部署安装一个mysql服务"></a>helm部署安装一个mysql服务</h3><p>在部署mysql的时候，如何开启storageclass以及如何使用？</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">root@master</span> <span class="string">archive</span>]<span class="comment"># yum -y install rpcbind nfs-utils</span></span><br><span class="line">[<span class="string">root@master</span> <span class="string">archive</span>]<span class="comment"># mkdir /data</span></span><br><span class="line">[<span class="string">root@master</span> <span class="string">archive</span>]<span class="comment"># vim /etc/exports</span></span><br><span class="line">[<span class="string">root@master</span> <span class="string">archive</span>]<span class="comment"># cat /etc/exports</span></span><br><span class="line"><span class="string">/data</span>    <span class="string">*(rw,sync,no_root_squash)</span></span><br><span class="line">[<span class="string">root@master</span> <span class="string">archive</span>]<span class="comment"># systemctl start rpcbind</span></span><br><span class="line">[<span class="string">root@master</span> <span class="string">archive</span>]<span class="comment"># systemctl start nfs-server.service </span></span><br><span class="line">[<span class="string">root@master</span> <span class="string">archive</span>]<span class="comment"># showmount -e </span></span><br><span class="line"><span class="attr">Export list for master:</span></span><br><span class="line"><span class="string">/data</span> <span class="string">*</span></span><br><span class="line">[<span class="string">root@master</span> <span class="string">archive</span>]<span class="comment"># cat /etc/exports</span></span><br><span class="line"><span class="string">/data</span>    <span class="string">*(rw,sync,no_root_squash)</span></span><br><span class="line">[<span class="string">root@master</span> <span class="string">archive</span>]<span class="comment"># cat nfs-pv1.yml </span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">PersistentVolume</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">mysqlpv</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">capacity:</span></span><br><span class="line">    <span class="attr">storage:</span> <span class="string">8Gi</span></span><br><span class="line">  <span class="attr">accessModes:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">ReadWriteOnce</span></span><br><span class="line">  <span class="attr">persistentVolumeReclaimPolicy:</span> <span class="string">Recycle</span></span><br><span class="line">  <span class="attr">nfs:</span></span><br><span class="line">    <span class="attr">path:</span> <span class="string">/data/mysqlpv</span></span><br><span class="line">    <span class="attr">server:</span> <span class="number">192.168</span><span class="number">.1</span><span class="number">.11</span></span><br><span class="line">[<span class="string">root@master</span> <span class="string">archive</span>]<span class="comment"># mkdir /data/mysqlpv</span></span><br><span class="line">[<span class="string">root@master</span> <span class="string">archive</span>]<span class="comment"># kubectl apply -f nfs-pv1.yml </span></span><br><span class="line"><span class="string">persistentvolume/mysqlpv</span> <span class="string">created</span></span><br><span class="line">[<span class="string">root@master</span> <span class="string">archive</span>]<span class="comment"># kubectl get pv</span></span><br><span class="line"><span class="string">NAME</span>      <span class="string">CAPACITY</span>   <span class="string">ACCESS</span> <span class="string">MODES</span>   <span class="string">RECLAIM</span> <span class="string">POLICY</span>   <span class="string">STATUS</span>      <span class="string">CLAIM</span>   <span class="string">STORAGECLASS</span>   <span class="string">REASON</span>   <span class="string">AGE</span></span><br><span class="line"><span class="string">mysqlpv</span>   <span class="string">8Gi</span>        <span class="string">RWO</span>            <span class="string">Recycle</span>          <span class="string">Available</span>                                   <span class="string">2s</span></span><br><span class="line">[<span class="string">root@master</span> <span class="string">mysql</span>]<span class="comment"># helm install stable/mysql -n bdqn-mysql  --set mysqlRootPassword=123.com</span></span><br><span class="line"><span class="attr">NAME:</span>   <span class="string">bdqn-mysql</span></span><br><span class="line">[<span class="string">root@master</span> <span class="string">mysql</span>]<span class="comment"># kubectl get deployments.</span></span><br><span class="line"><span class="string">NAME</span>               <span class="string">READY</span>   <span class="string">UP-TO-DATE</span>   <span class="string">AVAILABLE</span>   <span class="string">AGE</span></span><br><span class="line"><span class="string">bdqn-mysql-mysql</span>   <span class="number">1</span><span class="string">/1</span>     <span class="number">1</span>            <span class="number">1</span>           <span class="string">48s</span></span><br><span class="line">[<span class="string">root@master</span> <span class="string">mysql</span>]<span class="comment"># kubectl get pod</span></span><br><span class="line">[<span class="string">root@master</span> <span class="string">mysql</span>]<span class="comment"># kubectl get pod </span></span><br><span class="line">[<span class="string">root@master</span> <span class="string">mysql</span>]<span class="comment"># kubectl get pv</span></span><br><span class="line">[<span class="string">root@master</span> <span class="string">mysql</span>]<span class="comment"># kubectl exec -it bdqn-mysql-mysql-7b89c7b99-f65x9 -- mysql -u root -p123.com</span></span><br></pre></td></tr></table></figure>
-
+<pre class=" language-yaml"><code class="language-yaml"><span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># yum -y install rpcbind nfs-utils</span>
+<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># mkdir /data</span>
+<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># vim /etc/exports</span>
+<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># cat /etc/exports</span>
+/data    *(rw<span class="token punctuation">,</span>sync<span class="token punctuation">,</span>no_root_squash)
+<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># systemctl start rpcbind</span>
+<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># systemctl start nfs-server.service </span>
+<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># showmount -e </span>
+Export list for master<span class="token punctuation">:</span>
+/data *
+<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># cat /etc/exports</span>
+/data    *(rw<span class="token punctuation">,</span>sync<span class="token punctuation">,</span>no_root_squash)
+<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># cat nfs-pv1.yml </span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> PersistentVolume
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> mysqlpv
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">capacity</span><span class="token punctuation">:</span>
+    <span class="token key atrule">storage</span><span class="token punctuation">:</span> 8Gi
+  <span class="token key atrule">accessModes</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> ReadWriteOnce
+  <span class="token key atrule">persistentVolumeReclaimPolicy</span><span class="token punctuation">:</span> Recycle
+  <span class="token key atrule">nfs</span><span class="token punctuation">:</span>
+    <span class="token key atrule">path</span><span class="token punctuation">:</span> /data/mysqlpv
+    <span class="token key atrule">server</span><span class="token punctuation">:</span> 192.168.1.11
+<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># mkdir /data/mysqlpv</span>
+<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl apply -f nfs-pv1.yml </span>
+persistentvolume/mysqlpv created
+<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl get pv</span>
+NAME      CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   REASON   AGE
+mysqlpv   8Gi        RWO            Recycle          Available                                   2s
+<span class="token punctuation">[</span>root@master mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># helm install stable/mysql -n bdqn-mysql  --set mysqlRootPassword=123.com</span>
+<span class="token key atrule">NAME</span><span class="token punctuation">:</span>   bdqn<span class="token punctuation">-</span>mysql
+<span class="token punctuation">[</span>root@master mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl get deployments.</span>
+NAME               READY   UP<span class="token punctuation">-</span>TO<span class="token punctuation">-</span>DATE   AVAILABLE   AGE
+bdqn<span class="token punctuation">-</span>mysql<span class="token punctuation">-</span>mysql   1/1     1            1           48s
+<span class="token punctuation">[</span>root@master mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl get pod</span>
+<span class="token punctuation">[</span>root@master mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl get pod </span>
+<span class="token punctuation">[</span>root@master mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl get pv</span>
+<span class="token punctuation">[</span>root@master mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl exec -it bdqn-mysql-mysql-7b89c7b99-f65x9 -- mysql -u root -p123.com</span></code></pre>
 <p>服务的升级：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master mysql]# helm upgrade --set imageTag&#x3D;5.7.15 bdqn-mysql stable&#x2F;mysql</span><br></pre></td></tr></table></figure>
-
+<pre><code>[root@master mysql]# helm upgrade --set imageTag=5.7.15 bdqn-mysql stable/mysql</code></pre>
 <p>服务的回滚：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;查看历史版本</span><br><span class="line">[root@master mysql]# helm history bdqn-mysql</span><br><span class="line">&#x2F;&#x2F;指定回滚版本</span><br><span class="line">[root@master mysql]# helm rollback bdqn-mysql 1</span><br></pre></td></tr></table></figure>
-
+<pre><code>//查看历史版本
+[root@master mysql]# helm history bdqn-mysql
+//指定回滚版本
+[root@master mysql]# helm rollback bdqn-mysql 1</code></pre>
 
             </div>
             <hr/>
@@ -735,38 +820,52 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/08/03/doshboard/">
+                <a href="/2020/03/21/helm-ru-men/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="helm入门">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">helm入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            一、k8s的UI访问界面-dashboard在dashboard中，虽然可以做到创建，删除，修改资源等操作，但通常情况下，我们会把它当作健康k8s集群的软件。
-1、到github上搜索dashboard
-基于token的方法登录dashbo
+                            Helm[root@master helm]# wget https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz
+[root@master helm]# ls
+helm-v2.14.3-lin
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-21
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            董炎哲
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/k8s%E9%9B%86%E7%BE%A4/" class="post-category">
+                                    k8s集群
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/helm/">
+                        <span class="chip bg-color">helm</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -775,36 +874,50 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2020/01/02/k8s-jia-gou-ji-ben-ming-ling/">
+                <a href="/2020/03/21/helm-ru-men/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="helm入门">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">helm入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            架构kubectl：k8s是命令行端，用来发送客户的操作指令。
-*API server：是k8s集群的前端接口，各种客户端工具以及k8s的其他组件可以通过他管理k8s集群的各种资源。他提供了HTTP/HTTPS RESTful AIP，即k
+                            Helm[root@master helm]# wget https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz
+[root@master helm]# ls
+helm-v2.14.3-lin
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-21
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            董炎哲
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/k8s%E9%9B%86%E7%BE%A4/" class="post-category">
+                                    k8s集群
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/helm/">
+                        <span class="chip bg-color">helm</span>
+                    </a>
+                    
                 </div>
                 
             </div>

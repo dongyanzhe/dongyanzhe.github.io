@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dongyanzhe.github.io/"/>
-  <updated>2020-01-15T03:05:44.863Z</updated>
+  <updated>2020-08-03T11:36:24.956Z</updated>
   <id>https://dongyanzhe.github.io/</id>
   
   <author>
@@ -15,76 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="https://dongyanzhe.github.io/2020/08/03/job-zi-yuan-dui-xiang/"/>
-    <id>https://dongyanzhe.github.io/2020/08/03/job-zi-yuan-dui-xiang/</id>
-    <published>2020-08-03T11:02:39.723Z</published>
-    <updated>2020-01-15T03:05:44.863Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Job资源对象&quot;&gt;&lt;a href=&quot;#Job资源对象&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://dongyanzhe.github.io/2020/08/03/helm-zi-ding-yi-mo-ban/"/>
-    <id>https://dongyanzhe.github.io/2020/08/03/helm-zi-ding-yi-mo-ban/</id>
-    <published>2020-08-03T11:02:39.427Z</published>
-    <updated>2020-03-05T07:43:53.397Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;Helm&quot;&gt;&lt;a href=&quot;#Helm&quot; class=&quot;headerlink&quot; title=&quot;Helm&quot;&gt;&lt;/a&gt;Helm&lt;/h3&gt;&lt;p&gt;charts：包、relieases：实例。&lt;/p&gt;
-&lt;h5 id=&quot;自定义模板&quot;&gt;&lt;a href=&quot;#自定义模板&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://dongyanzhe.github.io/2020/08/03/doshboard/"/>
-    <id>https://dongyanzhe.github.io/2020/08/03/doshboard/</id>
-    <published>2020-08-03T11:02:39.304Z</published>
-    <updated>2020-02-26T02:15:42.875Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;一、k8s的UI访问界面-dashboard&quot;&gt;&lt;a href=&quot;#一、k8s的UI访问界面-dashboard&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
   
   <entry>
     <title>helm入门</title>
@@ -104,30 +34,6 @@
     
     
       <category term="helm" scheme="https://dongyanzhe.github.io/tags/helm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://dongyanzhe.github.io/2020/01/02/k8s-jia-gou-ji-ben-ming-ling/"/>
-    <id>https://dongyanzhe.github.io/2020/01/02/k8s-jia-gou-ji-ben-ming-ling/</id>
-    <published>2020-01-02T00:38:54.942Z</published>
-    <updated>2020-01-04T04:08:02.945Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;架构&quot;&gt;&lt;a href=&quot;#架构&quot; class=&quot;headerlink&quot; title=&quot;架构&quot;&gt;&lt;/a&gt;架构&lt;/h1&gt;&lt;p&gt;kubectl：k8s是命令行端，用来发送客户的操作指令。&lt;/p&gt;
-&lt;p&gt;*API
-        
-      
-    
-    </summary>
-    
-    
     
   </entry>
   
