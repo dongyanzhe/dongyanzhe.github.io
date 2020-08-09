@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dongyanzhe.github.io/"/>
-  <updated>2020-08-03T11:36:24.956Z</updated>
+  <updated>2020-08-09T11:40:43.079Z</updated>
   <id>https://dongyanzhe.github.io/</id>
   
   <author>
@@ -17,9 +17,72 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Python列表操作</title>
+    <link href="https://dongyanzhe.github.io/2020/07/21/python-lie-biao-cao-zuo/"/>
+    <id>https://dongyanzhe.github.io/2020/07/21/python-lie-biao-cao-zuo/</id>
+    <published>2020-07-20T16:00:00.000Z</published>
+    <updated>2020-08-09T11:40:43.079Z</updated>
+    
+    <summary type="html">
+    
+      Python列表操作
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://dongyanzhe.github.io/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="https://dongyanzhe.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python布尔表达式</title>
+    <link href="https://dongyanzhe.github.io/2020/07/21/python-bu-er-biao-da-shi/"/>
+    <id>https://dongyanzhe.github.io/2020/07/21/python-bu-er-biao-da-shi/</id>
+    <published>2020-07-20T16:00:00.000Z</published>
+    <updated>2020-08-09T11:44:00.073Z</updated>
+    
+    <summary type="html">
+    
+      Python布尔表达式
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://dongyanzhe.github.io/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="https://dongyanzhe.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python变量和简单的数据类型</title>
+    <link href="https://dongyanzhe.github.io/2020/07/21/python-bian-liang-he-jian-dan-de-shu-ju-lei-xing/"/>
+    <id>https://dongyanzhe.github.io/2020/07/21/python-bian-liang-he-jian-dan-de-shu-ju-lei-xing/</id>
+    <published>2020-07-20T16:00:00.000Z</published>
+    <updated>2020-08-09T11:39:02.079Z</updated>
+    
+    <summary type="html">
+    
+      Pthon变量和简单的数据类型
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://dongyanzhe.github.io/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="https://dongyanzhe.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>helm入门</title>
-    <link href="https://dongyanzhe.github.io/2020/03/21/helm-ru-men/"/>
-    <id>https://dongyanzhe.github.io/2020/03/21/helm-ru-men/</id>
+    <link href="https://dongyanzhe.github.io/2020/03/21/k8s-helm-ru-men/"/>
+    <id>https://dongyanzhe.github.io/2020/03/21/k8s-helm-ru-men/</id>
     <published>2020-03-20T16:00:00.000Z</published>
     <updated>2020-08-03T11:36:24.956Z</updated>
     

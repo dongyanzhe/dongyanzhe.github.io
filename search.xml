@@ -4,9 +4,84 @@
   
     
     <entry>
+      <title>Python列表操作</title>
+      <link href="/2020/07/21/python-lie-biao-cao-zuo/"/>
+      <url>/2020/07/21/python-lie-biao-cao-zuo/</url>
+      
+        <content type="html"><![CDATA[<h1 id="列表操作"><a href="#列表操作" class="headerlink" title="列表操作"></a>列表操作</h1><h3 id="遍历列表"><a href="#遍历列表" class="headerlink" title="遍历列表"></a>遍历列表</h3><h5 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h5><blockquote><p>定义一个列表<br>names = [‘张三’,’李四’,’王五’,’赵六’,’田七’]<br>zhang_san = names[0]<br>li_si = names[1]<br>wang_wu = names[2]<br>zhao_liu = names[3]<br>tian_qi = names[4]<br>print(zhang_san+” “+li_si+” “+wang_wu)</p></blockquote><blockquote><p>for循环</p><p>for name in names:<br>        print(name)</p></blockquote><blockquote><p>不仅局限为单纯显示，还可以结合别的模块</p><p>names2 = [‘anlen’,’bob’]<br>for name in names2:<br>    print(name.title())</p></blockquote><h5 id="魔法推导式"><a href="#魔法推导式" class="headerlink" title="魔法推导式"></a>魔法推导式</h5><blockquote><p>n = [name for name in names2]</p><p>nums = [num**2 for num in range(1,11)]</p></blockquote><h4 id="创建数值列表"><a href="#创建数值列表" class="headerlink" title="创建数值列表"></a>创建数值列表</h4><h5 id="range-val1-val2-val3"><a href="#range-val1-val2-val3" class="headerlink" title="range(val1,val2,val3):"></a>range(val1,val2,val3):</h5><blockquote><p>参数1：起始值（包含自己）</p><p>参数2：终止值（不包含自己）</p><p>参数3：步长（间隔数）</p></blockquote><blockquote><p>range函数<br>for num in range(1,11):<br>    print(num,end=” “)</p></blockquote><blockquote><p>输出1-10之间的偶数<br>for num in range(2,11,2):<br>    print(num,end=” “)</p></blockquote><blockquote><p>输出1-10之间的奇数<br>for num in range(1,11,2):<br>    print(num,end=” “)</p></blockquote><blockquote><p>输出1-10之间的奇数的平方<br>for num in range(1,11,2):<br>    print(num**2,end=” “)</p></blockquote><h5 id="创建数字列表"><a href="#创建数字列表" class="headerlink" title="创建数字列表"></a>创建数字列表</h5><blockquote><p>numbers = list(range(1,11))<br>print(numbers)</p></blockquote><h5 id="数字列表的简单统计计算"><a href="#数字列表的简单统计计算" class="headerlink" title="数字列表的简单统计计算"></a>数字列表的简单统计计算</h5><h6 id="最大值"><a href="#最大值" class="headerlink" title="最大值"></a>最大值</h6><blockquote><p>max()</p></blockquote><h6 id="最小值"><a href="#最小值" class="headerlink" title="最小值"></a>最小值</h6><blockquote><p>min()</p></blockquote><h6 id="总和"><a href="#总和" class="headerlink" title="总和"></a>总和</h6><blockquote><p>sum()</p></blockquote><blockquote><p>列表的最大值、最小值、总和<br>print(max(numbers))<br>print(min(numbers))<br>print(sum(numbers))</p></blockquote><h3 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h3><h3 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python布尔表达式</title>
+      <link href="/2020/07/21/python-bu-er-biao-da-shi/"/>
+      <url>/2020/07/21/python-bu-er-biao-da-shi/</url>
+      
+        <content type="html"><![CDATA[<h3 id="条件测试—-布尔表达式"><a href="#条件测试—-布尔表达式" class="headerlink" title="条件测试—-布尔表达式"></a>条件测试—-布尔表达式</h3><h5 id="条件测试案例"><a href="#条件测试案例" class="headerlink" title="条件测试案例"></a>条件测试案例</h5><blockquote><p>条件测试案例</p><p>算术运算符在条件表达式中的应用：ATM/客服</p><p>key = 1<br>if key == 1:<br>    print(‘cunkuan’)<br>else:<br>    print(‘qukuan’)</p></blockquote><h5 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符<img src="C:\Users\12165\AppData\Roaming\Typora\typora-user-images\image-20200313112518352.png" alt="image-20200313112518352"></h5><blockquote><p>//!=<br>if key!=1:<br>    print(“不存款”)<br>else:<br>    print(“存款”)</p></blockquote><h5 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h5><blockquote><p>and</p><p>or</p></blockquote><h5 id="成员运算符"><a href="#成员运算符" class="headerlink" title="成员运算符"></a>成员运算符</h5><blockquote><p>in</p><p>not in</p></blockquote><h3 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h3><p>if语句结构</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python变量和简单的数据类型</title>
+      <link href="/2020/07/21/python-bian-liang-he-jian-dan-de-shu-ju-lei-xing/"/>
+      <url>/2020/07/21/python-bian-liang-he-jian-dan-de-shu-ju-lei-xing/</url>
+      
+        <content type="html"><![CDATA[<p><img src="C:\Users\12165\AppData\Roaming\Typora\typora-user-images\image-20200310112113148.png" alt="image-20200310112113148"></p><h3 id="安装ipython"><a href="#安装ipython" class="headerlink" title="安装ipython"></a>安装ipython</h3><p>查看当前库里有什么东西</p><pre><code>C:\Users\12165&gt;pip3 listPackage    Version---------- -------pip        19.2.3setuptools 41.2.0WARNING: You are using pip version 19.2.3, however version 20.0.2 is available.You should consider upgrading via the &#39;python -m pip install --upgrade pip&#39; command.//当提示&#39;python -m pip install --upgrade pip&#39;复制命令执行更新pipC:\Users\12165&gt;python -m pip install --upgrade pipCollecting pip  Downloading https://files.pythonhosted.org/packages/54/0c/d01aa759fdc501a58f431eb594a17495f15b88da142ce14b5845662c13f3/pip-20.0.2-py2.py3-none-any.whl (1.4MB)     |███████████████████████         | 1.0MB 9.7kB/s eta 0:00:42//或者执行该命令python -m pip install --upgrade pip -i https://pypi.douban.com/simple</code></pre><p>下载ipython</p><pre><code>//下载ipythonC:\Users\12165&gt;pip3 install ipythonCollecting ipython  Downloading ipython-7.13.0-py3-none-any.whl (780 kB)     |█████████                       | 225 kB 7.6 kB/s eta 0:01:14 </code></pre><h3 id="使用ipython"><a href="#使用ipython" class="headerlink" title="使用ipython"></a>使用ipython</h3><p>进入ipython</p><pre><code>C:\Users\12165&gt;ipython//退出ipythonIn [1]:exit                                                       </code></pre><h3 id="jupyter"><a href="#jupyter" class="headerlink" title="jupyter"></a>jupyter</h3><h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><pre><code>C:\Users\12165&gt;pip3 install -i https://pypi.douban.com/simple/ jupyter//或者C:\Users\12165&gt;pip3 install jupyter</code></pre><h5 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h5><pre><code>//启用C:\Users\12165&gt;jupyter notebook基于浏览器进行编辑</code></pre><h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><h5 id="变量的命名规则"><a href="#变量的命名规则" class="headerlink" title="变量的命名规则"></a>变量的命名规则</h5><p><em>只能包含的：字母、数字、下划线，但是不能以数字开头</em></p><p><em>不能包含空格，但是可以用下划线分割其中的单词</em></p><p><em>不能使用python关键字和函数的名称用做变量</em>：</p><blockquote><pre><code>比如：import、class、return、and、def、from...</code></pre></blockquote><p><em>变量名应该简短并且见名知意</em></p><p><em>慎用小写字母i和大写字母O</em></p><h5 id="使用变量的常见错误"><a href="#使用变量的常见错误" class="headerlink" title="使用变量的常见错误"></a>使用变量的常见错误</h5><p><em>变量未定义就使用</em></p><blockquote><p><strong>print(num)</strong></p><hr><pre><code>---------------------------------------------------------------------------NameError                                 Traceback (most recent call last)&lt;ipython-input-30-55a60ae9504f&gt; in &lt;module&gt;----&gt; 1 print(num)NameError: name &#39;num&#39; is not defined</code></pre></blockquote><h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><h5 id="表达形式"><a href="#表达形式" class="headerlink" title="表达形式"></a>表达形式</h5><blockquote><p>单引号</p><p>双引号</p><p>三引号</p></blockquote><pre><code>str1 = &#39;hello&#39;str2 = &#39;world&#39;str3 = &#39;&#39;&#39;春眠不觉晓，处处闻啼鸟。夜来风雨声，花落知多少。&#39;&#39;&#39;print(str1)print(str2)print(str3)</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>helm入门</title>
-      <link href="/2020/03/21/helm-ru-men/"/>
-      <url>/2020/03/21/helm-ru-men/</url>
+      <link href="/2020/03/21/k8s-helm-ru-men/"/>
+      <url>/2020/03/21/k8s-helm-ru-men/</url>
       
         <content type="html"><![CDATA[<h3 id="Helm"><a href="#Helm" class="headerlink" title="Helm"></a>Helm</h3><pre><code>[root@master helm]# wget https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz[root@master helm]# lshelm-v2.14.3-linux-amd64.tar.gz[root@master helm]# tar -zxvf helm-v2.14.3-linux-amd64.tar.gz linux-amd64/linux-amd64/helmlinux-amd64/README.mdlinux-amd64/LICENSElinux-amd64/tiller[root@master helm]# lshelm-v2.14.3-linux-amd64.tar.gz  linux-amd64[root@master helm]# mv linux-amd64/helm /usr/local/bin/[root@master helm]# chmod +x /usr/local/bin/helm [root@master helm]# helm help[root@master helm]# source &lt;(helm completion bash)//将yaml文件导入[root@master helm]# kubectl apply -f tiller-rbac.yaml serviceaccount/tiller createdclusterrolebinding.rbac.authorization.k8s.io/tiller created//初始化[root@master helm]# helm init --service-account=tiller//添加国内heml仓库源[root@master helm]# helm repo list NAME      URL                                             stable    https://kubernetes-charts.storage.googleapis.comlocal     http://127.0.0.1:8879/charts  [root@master helm]# helm repo add stable https://kubernetes.oss-cn-hangzhou.aliyuncs.com/charts&quot;stable&quot; has been added to your repositories[root@master helm]# helm repo list NAME      URL                                                   stable    https://kubernetes.oss-cn-hangzhou.aliyuncs.com/chartslocal     http://127.0.0.1:8879/charts  [root@master helm]# helm version Client: &amp;version.Version&amp;#123;SemVer:&quot;v2.14.3&quot;, GitCommit:&quot;0e7f3b6637f7af8fcfddb3d2941fcc7cbebb0085&quot;, GitTreeState:&quot;clean&quot;&amp;#125;Server: &amp;version.Version&amp;#123;SemVer:&quot;v2.14.3&quot;, GitCommit:&quot;0e7f3b6637f7af8fcfddb3d2941fcc7cbebb0085&quot;, GitTreeState:&quot;clean&quot;&amp;#125;</code></pre><h5 id="helm"><a href="#helm" class="headerlink" title="helm"></a>helm</h5><p>包管理工具：</p><p>Charts：是一个helm的程序包，它包含了运行一个kubernetes应用程序所需要的镜像，依赖关系和资源定义等。</p><p>Release：应用程序运行Charts字后，得到的一个实例。</p><pre><code>//搜索包[root@master helm]# helm search //搜索指定包[root@master helm]# helm search redis//查看包的详细信息[root@master helm]# helm inspect stable/redis//部署一个实例，[root@master helm]# helm install stable/redis -n redis --dry-runNAME:   redis    1、关于这个release的描述。    2、关于这个release资源的描述。    3、怎么使用这个release。</code></pre><h3 id="helm部署安装一个Mysql服务"><a href="#helm部署安装一个Mysql服务" class="headerlink" title="helm部署安装一个Mysql服务"></a>helm部署安装一个Mysql服务</h3><p>Chart.yaml</p><p>这个chart包的概要信息</p><p>name和version这俩是必填项，其他可选。</p><pre><code>[root@master mysql]# pwd/root/.helm/cache/archive/mysql[root@master archive]# helm install stable/mysql -n mysql[root@master archive]# lsmysql-0.3.5.tgz  redis  redis-1.1.15.tgz[root@master archive]# tar -zxvf mysql-0.3.5.tgz </code></pre><h5 id="README-md"><a href="#README-md" class="headerlink" title="README.md"></a>README.md</h5><p>是这个chart包的一个使用帮助文档</p><h5 id="templates"><a href="#templates" class="headerlink" title="templates"></a>templates</h5><p>chart包内各种资源对象的模板。</p><h5 id="values-yaml"><a href="#values-yaml" class="headerlink" title="values.yaml"></a>values.yaml</h5><p>是这个chart包的默认值，可以</p><h3 id="helm部署安装一个mysql服务"><a href="#helm部署安装一个mysql服务" class="headerlink" title="helm部署安装一个mysql服务"></a>helm部署安装一个mysql服务</h3><p>在部署mysql的时候，如何开启storageclass以及如何使用？</p><pre class=" language-yaml"><code class="language-yaml"><span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># yum -y install rpcbind nfs-utils</span><span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># mkdir /data</span><span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># vim /etc/exports</span><span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># cat /etc/exports</span>/data    *(rw<span class="token punctuation">,</span>sync<span class="token punctuation">,</span>no_root_squash)<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># systemctl start rpcbind</span><span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># systemctl start nfs-server.service </span><span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># showmount -e </span>Export list for master<span class="token punctuation">:</span>/data *<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># cat /etc/exports</span>/data    *(rw<span class="token punctuation">,</span>sync<span class="token punctuation">,</span>no_root_squash)<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># cat nfs-pv1.yml </span><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1<span class="token key atrule">kind</span><span class="token punctuation">:</span> PersistentVolume<span class="token key atrule">metadata</span><span class="token punctuation">:</span>  <span class="token key atrule">name</span><span class="token punctuation">:</span> mysqlpv<span class="token key atrule">spec</span><span class="token punctuation">:</span>  <span class="token key atrule">capacity</span><span class="token punctuation">:</span>    <span class="token key atrule">storage</span><span class="token punctuation">:</span> 8Gi  <span class="token key atrule">accessModes</span><span class="token punctuation">:</span>    <span class="token punctuation">-</span> ReadWriteOnce  <span class="token key atrule">persistentVolumeReclaimPolicy</span><span class="token punctuation">:</span> Recycle  <span class="token key atrule">nfs</span><span class="token punctuation">:</span>    <span class="token key atrule">path</span><span class="token punctuation">:</span> /data/mysqlpv    <span class="token key atrule">server</span><span class="token punctuation">:</span> 192.168.1.11<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># mkdir /data/mysqlpv</span><span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl apply -f nfs-pv1.yml </span>persistentvolume/mysqlpv created<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl get pv</span>NAME      CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   REASON   AGEmysqlpv   8Gi        RWO            Recycle          Available                                   2s<span class="token punctuation">[</span>root@master mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># helm install stable/mysql -n bdqn-mysql  --set mysqlRootPassword=123.com</span><span class="token key atrule">NAME</span><span class="token punctuation">:</span>   bdqn<span class="token punctuation">-</span>mysql<span class="token punctuation">[</span>root@master mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl get deployments.</span>NAME               READY   UP<span class="token punctuation">-</span>TO<span class="token punctuation">-</span>DATE   AVAILABLE   AGEbdqn<span class="token punctuation">-</span>mysql<span class="token punctuation">-</span>mysql   1/1     1            1           48s<span class="token punctuation">[</span>root@master mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl get pod</span><span class="token punctuation">[</span>root@master mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl get pod </span><span class="token punctuation">[</span>root@master mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl get pv</span><span class="token punctuation">[</span>root@master mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl exec -it bdqn-mysql-mysql-7b89c7b99-f65x9 -- mysql -u root -p123.com</span></code></pre><p>服务的升级：</p><pre><code>[root@master mysql]# helm upgrade --set imageTag=5.7.15 bdqn-mysql stable/mysql</code></pre><p>服务的回滚：</p><pre><code>//查看历史版本[root@master mysql]# helm history bdqn-mysql//指定回滚版本[root@master mysql]# helm rollback bdqn-mysql 1</code></pre>]]></content>
       
