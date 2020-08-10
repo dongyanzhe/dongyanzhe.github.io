@@ -88,14 +88,14 @@
       
       <categories>
           
-          <category> k8s集群 </category>
+          <category> helm </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> helm </tag>
+            <tag> k8s集群 </tag>
             
         </tags>
       
@@ -120,7 +120,7 @@
       
         <tags>
             
-            <tag> doshboard </tag>
+            <tag> k8s集群 </tag>
             
         </tags>
       
