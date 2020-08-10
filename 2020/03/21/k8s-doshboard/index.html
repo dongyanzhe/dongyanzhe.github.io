@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="helm入门, 欢迎来到故瑾的博客">
+    <meta name="keywords" content="doshboard, 欢迎来到故瑾的博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>helm入门 | 欢迎来到故瑾的博客</title>
+    <title>doshboard | 欢迎来到故瑾的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">helm入门</h1>
+                    <h1 class="description center-align post-title">doshboard</h1>
                 </div>
             </div>
         </div>
@@ -432,8 +432,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/helm/">
-                                <span class="chip bg-color">helm</span>
+                            <a href="/tags/doshboard/">
+                                <span class="chip bg-color">doshboard</span>
                             </a>
                         
                     </div>
@@ -444,8 +444,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/k8s%E9%9B%86%E7%BE%A4/" class="post-category">
-                                k8s集群
+                            <a href="/categories/doshboard/" class="post-category">
+                                doshboard
                             </a>
                         
                     </div>
@@ -466,7 +466,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    808
+                    554
                 </div>
                 
 
@@ -478,117 +478,58 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Helm"><a href="#Helm" class="headerlink" title="Helm"></a>Helm</h3><pre><code>[root@master helm]# wget https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz
-[root@master helm]# ls
-helm-v2.14.3-linux-amd64.tar.gz
-[root@master helm]# tar -zxvf helm-v2.14.3-linux-amd64.tar.gz 
-linux-amd64/
-linux-amd64/helm
-linux-amd64/README.md
-linux-amd64/LICENSE
-linux-amd64/tiller
-[root@master helm]# ls
-helm-v2.14.3-linux-amd64.tar.gz  linux-amd64
-[root@master helm]# mv linux-amd64/helm /usr/local/bin/
-[root@master helm]# chmod +x /usr/local/bin/helm 
-[root@master helm]# helm help
-[root@master helm]# source &lt;(helm completion bash)
-//将yaml文件导入
-[root@master helm]# kubectl apply -f tiller-rbac.yaml 
-serviceaccount/tiller created
-clusterrolebinding.rbac.authorization.k8s.io/tiller created
-//初始化
-[root@master helm]# helm init --service-account=tiller
-//添加国内heml仓库源
-[root@master helm]# helm repo list 
-NAME      URL                                             
-stable    https://kubernetes-charts.storage.googleapis.com
-local     http://127.0.0.1:8879/charts  
-[root@master helm]# helm repo add stable https://kubernetes.oss-cn-hangzhou.aliyuncs.com/charts
-&quot;stable&quot; has been added to your repositories
-[root@master helm]# helm repo list 
-NAME      URL                                                   
-stable    https://kubernetes.oss-cn-hangzhou.aliyuncs.com/charts
-local     http://127.0.0.1:8879/charts  
-[root@master helm]# helm version 
-Client: &amp;version.Version&amp;#123;SemVer:&quot;v2.14.3&quot;, GitCommit:&quot;0e7f3b6637f7af8fcfddb3d2941fcc7cbebb0085&quot;, GitTreeState:&quot;clean&quot;&amp;#125;
-Server: &amp;version.Version&amp;#123;SemVer:&quot;v2.14.3&quot;, GitCommit:&quot;0e7f3b6637f7af8fcfddb3d2941fcc7cbebb0085&quot;, GitTreeState:&quot;clean&quot;&amp;#125;</code></pre>
-<h5 id="helm"><a href="#helm" class="headerlink" title="helm"></a>helm</h5><p>包管理工具：</p>
-<p>Charts：是一个helm的程序包，它包含了运行一个kubernetes应用程序所需要的镜像，依赖关系和资源定义等。</p>
-<p>Release：应用程序运行Charts字后，得到的一个实例。</p>
-<pre><code>//搜索包
-[root@master helm]# helm search 
-//搜索指定包
-[root@master helm]# helm search redis
-//查看包的详细信息
-[root@master helm]# helm inspect stable/redis
-//部署一个实例，
-[root@master helm]# helm install stable/redis -n redis --dry-run
-NAME:   redis
-    1、关于这个release的描述。
-    2、关于这个release资源的描述。
-    3、怎么使用这个release。</code></pre>
-<h3 id="helm部署安装一个Mysql服务"><a href="#helm部署安装一个Mysql服务" class="headerlink" title="helm部署安装一个Mysql服务"></a>helm部署安装一个Mysql服务</h3><p>Chart.yaml</p>
-<p>这个chart包的概要信息</p>
-<p>name和version这俩是必填项，其他可选。</p>
-<pre><code>[root@master mysql]# pwd
-/root/.helm/cache/archive/mysql
-[root@master archive]# helm install stable/mysql -n mysql
-[root@master archive]# ls
-mysql-0.3.5.tgz  redis  redis-1.1.15.tgz
-[root@master archive]# tar -zxvf mysql-0.3.5.tgz </code></pre>
-<h5 id="README-md"><a href="#README-md" class="headerlink" title="README.md"></a>README.md</h5><p>是这个chart包的一个使用帮助文档</p>
-<h5 id="templates"><a href="#templates" class="headerlink" title="templates"></a>templates</h5><p>chart包内各种资源对象的模板。</p>
-<h5 id="values-yaml"><a href="#values-yaml" class="headerlink" title="values.yaml"></a>values.yaml</h5><p>是这个chart包的默认值，可以</p>
-<h3 id="helm部署安装一个mysql服务"><a href="#helm部署安装一个mysql服务" class="headerlink" title="helm部署安装一个mysql服务"></a>helm部署安装一个mysql服务</h3><p>在部署mysql的时候，如何开启storageclass以及如何使用？</p>
-<pre class=" language-yaml"><code class="language-yaml"><span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># yum -y install rpcbind nfs-utils</span>
-<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># mkdir /data</span>
-<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># vim /etc/exports</span>
-<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># cat /etc/exports</span>
-/data    *(rw<span class="token punctuation">,</span>sync<span class="token punctuation">,</span>no_root_squash)
-<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># systemctl start rpcbind</span>
-<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># systemctl start nfs-server.service </span>
-<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># showmount -e </span>
-Export list for master<span class="token punctuation">:</span>
-/data *
-<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># cat /etc/exports</span>
-/data    *(rw<span class="token punctuation">,</span>sync<span class="token punctuation">,</span>no_root_squash)
-<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># cat nfs-pv1.yml </span>
-<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
-<span class="token key atrule">kind</span><span class="token punctuation">:</span> PersistentVolume
-<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
-  <span class="token key atrule">name</span><span class="token punctuation">:</span> mysqlpv
-<span class="token key atrule">spec</span><span class="token punctuation">:</span>
-  <span class="token key atrule">capacity</span><span class="token punctuation">:</span>
-    <span class="token key atrule">storage</span><span class="token punctuation">:</span> 8Gi
-  <span class="token key atrule">accessModes</span><span class="token punctuation">:</span>
-    <span class="token punctuation">-</span> ReadWriteOnce
-  <span class="token key atrule">persistentVolumeReclaimPolicy</span><span class="token punctuation">:</span> Recycle
-  <span class="token key atrule">nfs</span><span class="token punctuation">:</span>
-    <span class="token key atrule">path</span><span class="token punctuation">:</span> /data/mysqlpv
-    <span class="token key atrule">server</span><span class="token punctuation">:</span> 192.168.1.11
-<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># mkdir /data/mysqlpv</span>
-<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl apply -f nfs-pv1.yml </span>
-persistentvolume/mysqlpv created
-<span class="token punctuation">[</span>root@master archive<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl get pv</span>
-NAME      CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   REASON   AGE
-mysqlpv   8Gi        RWO            Recycle          Available                                   2s
-<span class="token punctuation">[</span>root@master mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># helm install stable/mysql -n bdqn-mysql  --set mysqlRootPassword=123.com</span>
-<span class="token key atrule">NAME</span><span class="token punctuation">:</span>   bdqn<span class="token punctuation">-</span>mysql
-<span class="token punctuation">[</span>root@master mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl get deployments.</span>
-NAME               READY   UP<span class="token punctuation">-</span>TO<span class="token punctuation">-</span>DATE   AVAILABLE   AGE
-bdqn<span class="token punctuation">-</span>mysql<span class="token punctuation">-</span>mysql   1/1     1            1           48s
-<span class="token punctuation">[</span>root@master mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl get pod</span>
-<span class="token punctuation">[</span>root@master mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl get pod </span>
-<span class="token punctuation">[</span>root@master mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl get pv</span>
-<span class="token punctuation">[</span>root@master mysql<span class="token punctuation">]</span><span class="token comment" spellcheck="true"># kubectl exec -it bdqn-mysql-mysql-7b89c7b99-f65x9 -- mysql -u root -p123.com</span></code></pre>
-<p>服务的升级：</p>
-<pre><code>[root@master mysql]# helm upgrade --set imageTag=5.7.15 bdqn-mysql stable/mysql</code></pre>
-<p>服务的回滚：</p>
-<pre><code>//查看历史版本
-[root@master mysql]# helm history bdqn-mysql
-//指定回滚版本
-[root@master mysql]# helm rollback bdqn-mysql 1</code></pre>
+                <h3 id="一、k8s的UI访问界面-dashboard"><a href="#一、k8s的UI访问界面-dashboard" class="headerlink" title="一、k8s的UI访问界面-dashboard"></a>一、k8s的UI访问界面-dashboard</h3><p>在dashboard中，虽然可以做到创建，删除，修改资源等操作，但通常情况下，我们会把它当作健康k8s集群的软件。</p>
+<p>1、到github上搜索dashboard</p>
+<h5 id="基于token的方法登录dashboard"><a href="#基于token的方法登录dashboard" class="headerlink" title="基于token的方法登录dashboard"></a>基于token的方法登录dashboard</h5><p>1、创建一个dashboard的管理用户。</p>
+<pre><code>[root@master dashboard]# kubectl create serviceaccount dashboard-admin -n kube-system
+
+serviceaccount/dashboard-admin created</code></pre>
+<p>2、绑定用户为集群管理用户。</p>
+<pre><code>[root@master dashboard]# kubectl create clusterrolebinding dashboard-cluster-admin --clusterrole=cluster-admin --serviceaccount=kube-system:dashboard-admin
+
+clusterrolebinding.rbac.authorization.k8s.io/dashboard-cluster-admin created</code></pre>
+<p>3、获取token</p>
+<pre><code>//得到token的名称
+[root@master dashboard]# kubectl get secrets -n kube-system | grep dashboard-admin            
+dashboard-admin-token-kz6tw                      kubernetes.io/service-account-token   3      5m8s
+[root@master dashboard]# kubectl get secrets -n kube-system dashboard-admin-token-kz6tw 
+NAME                          TYPE                                  DATA   AGE
+dashboard-admin-token-kz6tw   kubernetes.io/service-account-token   3      7m10s
+
+
+//查看上述得到的secret资源的详细信息，会得到token
+[root@master dashboard]# kubectl describe secrets -n kube-system dashboard-admin-token-kz6tw   </code></pre>
+<p><img src="C:\Users\12165\AppData\Roaming\Typora\typora-user-images\image-20200226090425791.png" alt="image-20200226090425791"></p>
+<p>4、在浏览器上使用token登录</p>
+<p>PS：如果使用的旧版本的dashboard，使用谷歌浏览器登陆可能是不成功的，需要换成其他浏览器，比如火狐</p>
+<h5 id="基于kubeconfig配置文件登录kubernetes"><a href="#基于kubeconfig配置文件登录kubernetes" class="headerlink" title="基于kubeconfig配置文件登录kubernetes"></a>基于kubeconfig配置文件登录kubernetes</h5><p>1、获取token</p>
+<pre><code>//得到token的名称
+[root@master dashboard]# kubectl get secrets -n kube-system | grep dashboard-admin            
+dashboard-admin-token-kz6tw                      kubernetes.io/service-account-token   3      5m8s
+[root@master dashboard]# kubectl get secrets -n kube-system dashboard-admin-token-kz6tw 
+NAME                          TYPE                                  DATA   AGE
+dashboard-admin-token-kz6tw   kubernetes.io/service-account-token   3      7m10s
+
+
+//查看上述得到的secret资源的详细信息，会得到token
+[root@master dashboard]# kubectl describe secrets -n kube-system dashboard-admin-token-kz6tw </code></pre>
+<p>2、生成kubeconfi配置文件</p>
+<pre><code>//设置一个环境变量代表获取到的token
+[root@master dashboard]# kubectl get secrets -n kube-system dashboard-admin-token-kz6tw -o jsonpath=&amp;#123;.data.token&amp;#125; | base64 -d
+
+[root@master dashboard]# DASH_TOKEN=$(kubectl get secrets -n kube-system dashboard-admin-token-kz6tw -o jsonpath=&amp;#123;.data.token&amp;#125; | base64 -d)
+
+
+//将k8s集群的配置信息写入
+[root@master dashboard]# kubectl config set-cluster kubernetes --server=192.168.1.11:6443  --kubeconfig=/root/.dashboard-admin.conf
+
+[root@master dashboard]# kubectl config set-credentials dashboard-admin --token=$DASH_TOKEN --kubeconfig=/root/.dashboard-admin.conf
+
+[root@master dashboard]# kubectl config set-context dashboard-admin@kubernetes --cluster=kubernetes --user=dashboard-admin --kubeconfig=/root/.dashboard-admin.conf
+
+[root@master dashboard]# kubectl config use-context dashboard-admin@kubernetes --kubeconfig=/root/.dashboard-admin.conf</code></pre>
+<p>3、将生成的/root/.dashboard-admin.conf的配置文件，导出并做保存。</p>
+<p>4、从浏览器选择kubeconfig的登录方式，</p>
 
             </div>
             <hr/>
@@ -614,7 +555,7 @@ bdqn<span class="token punctuation">-</span>mysql<span class="token punctuation"
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://dongyanzhe.github.io/2020/03/21/k8s-helm-ru-men/">https://dongyanzhe.github.io/2020/03/21/k8s-helm-ru-men/</a>
+                    <a href="https://dongyanzhe.github.io/2020/03/21/k8s-doshboard/">https://dongyanzhe.github.io/2020/03/21/k8s-doshboard/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -652,8 +593,8 @@ bdqn<span class="token punctuation">-</span>mysql<span class="token punctuation"
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/helm/">
-                                    <span class="chip bg-color">helm</span>
+                                <a href="/tags/doshboard/">
+                                    <span class="chip bg-color">doshboard</span>
                                 </a>
                             
                         </div>
@@ -825,37 +766,33 @@ bdqn<span class="token punctuation">-</span>mysql<span class="token punctuation"
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/07/21/python-bian-liang-he-jian-dan-de-shu-ju-lei-xing/">
+                <a href="/2020/03/21/k8s-helm-ru-men/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Python变量和简单的数据类型">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="helm入门">
                         
-                        <span class="card-title">Python变量和简单的数据类型</span>
+                        <span class="card-title">helm入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-安装ipython查看当前库里有什么东西
-C:\Users\12165&gt;pip3 list
-Package    Version
----------- -------
-pip        19.2.3
-setuptools 41.
+                            Helm[root@master helm]# wget https://get.helm.sh/helm-v2.14.3-linux-amd64.tar.gz
+[root@master helm]# ls
+helm-v2.14.3-lin
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-21
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-21
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python/" class="post-category">
-                                    Python
+                            <a href="/categories/k8s%E9%9B%86%E7%BE%A4/" class="post-category">
+                                    k8s集群
                                 </a>
                             
                             
@@ -865,8 +802,8 @@ setuptools 41.
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
+                    <a href="/tags/helm/">
+                        <span class="chip bg-color">helm</span>
                     </a>
                     
                 </div>
@@ -877,7 +814,7 @@ setuptools 41.
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
                 <a href="/2020/03/21/k8s-doshboard/">
@@ -913,6 +850,7 @@ setuptools 41.
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     

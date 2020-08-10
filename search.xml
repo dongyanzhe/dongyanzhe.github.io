@@ -102,6 +102,31 @@
     </entry>
     
     
+    
+    <entry>
+      <title>doshboard</title>
+      <link href="/2020/03/21/k8s-doshboard/"/>
+      <url>/2020/03/21/k8s-doshboard/</url>
+      
+        <content type="html"><![CDATA[<h3 id="一、k8s的UI访问界面-dashboard"><a href="#一、k8s的UI访问界面-dashboard" class="headerlink" title="一、k8s的UI访问界面-dashboard"></a>一、k8s的UI访问界面-dashboard</h3><p>在dashboard中，虽然可以做到创建，删除，修改资源等操作，但通常情况下，我们会把它当作健康k8s集群的软件。</p><p>1、到github上搜索dashboard</p><h5 id="基于token的方法登录dashboard"><a href="#基于token的方法登录dashboard" class="headerlink" title="基于token的方法登录dashboard"></a>基于token的方法登录dashboard</h5><p>1、创建一个dashboard的管理用户。</p><pre><code>[root@master dashboard]# kubectl create serviceaccount dashboard-admin -n kube-systemserviceaccount/dashboard-admin created</code></pre><p>2、绑定用户为集群管理用户。</p><pre><code>[root@master dashboard]# kubectl create clusterrolebinding dashboard-cluster-admin --clusterrole=cluster-admin --serviceaccount=kube-system:dashboard-adminclusterrolebinding.rbac.authorization.k8s.io/dashboard-cluster-admin created</code></pre><p>3、获取token</p><pre><code>//得到token的名称[root@master dashboard]# kubectl get secrets -n kube-system | grep dashboard-admin            dashboard-admin-token-kz6tw                      kubernetes.io/service-account-token   3      5m8s[root@master dashboard]# kubectl get secrets -n kube-system dashboard-admin-token-kz6tw NAME                          TYPE                                  DATA   AGEdashboard-admin-token-kz6tw   kubernetes.io/service-account-token   3      7m10s//查看上述得到的secret资源的详细信息，会得到token[root@master dashboard]# kubectl describe secrets -n kube-system dashboard-admin-token-kz6tw   </code></pre><p><img src="C:\Users\12165\AppData\Roaming\Typora\typora-user-images\image-20200226090425791.png" alt="image-20200226090425791"></p><p>4、在浏览器上使用token登录</p><p>PS：如果使用的旧版本的dashboard，使用谷歌浏览器登陆可能是不成功的，需要换成其他浏览器，比如火狐</p><h5 id="基于kubeconfig配置文件登录kubernetes"><a href="#基于kubeconfig配置文件登录kubernetes" class="headerlink" title="基于kubeconfig配置文件登录kubernetes"></a>基于kubeconfig配置文件登录kubernetes</h5><p>1、获取token</p><pre><code>//得到token的名称[root@master dashboard]# kubectl get secrets -n kube-system | grep dashboard-admin            dashboard-admin-token-kz6tw                      kubernetes.io/service-account-token   3      5m8s[root@master dashboard]# kubectl get secrets -n kube-system dashboard-admin-token-kz6tw NAME                          TYPE                                  DATA   AGEdashboard-admin-token-kz6tw   kubernetes.io/service-account-token   3      7m10s//查看上述得到的secret资源的详细信息，会得到token[root@master dashboard]# kubectl describe secrets -n kube-system dashboard-admin-token-kz6tw </code></pre><p>2、生成kubeconfi配置文件</p><pre><code>//设置一个环境变量代表获取到的token[root@master dashboard]# kubectl get secrets -n kube-system dashboard-admin-token-kz6tw -o jsonpath=&amp;#123;.data.token&amp;#125; | base64 -d[root@master dashboard]# DASH_TOKEN=$(kubectl get secrets -n kube-system dashboard-admin-token-kz6tw -o jsonpath=&amp;#123;.data.token&amp;#125; | base64 -d)//将k8s集群的配置信息写入[root@master dashboard]# kubectl config set-cluster kubernetes --server=192.168.1.11:6443  --kubeconfig=/root/.dashboard-admin.conf[root@master dashboard]# kubectl config set-credentials dashboard-admin --token=$DASH_TOKEN --kubeconfig=/root/.dashboard-admin.conf[root@master dashboard]# kubectl config set-context dashboard-admin@kubernetes --cluster=kubernetes --user=dashboard-admin --kubeconfig=/root/.dashboard-admin.conf[root@master dashboard]# kubectl config use-context dashboard-admin@kubernetes --kubeconfig=/root/.dashboard-admin.conf</code></pre><p>3、将生成的/root/.dashboard-admin.conf的配置文件，导出并做保存。</p><p>4、从浏览器选择kubeconfig的登录方式，</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> doshboard </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> doshboard </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>

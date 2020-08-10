@@ -100,4 +100,25 @@
     
   </entry>
   
+  <entry>
+    <title>doshboard</title>
+    <link href="https://dongyanzhe.github.io/2020/03/21/k8s-doshboard/"/>
+    <id>https://dongyanzhe.github.io/2020/03/21/k8s-doshboard/</id>
+    <published>2020-03-20T16:00:00.000Z</published>
+    <updated>2020-08-10T09:50:07.751Z</updated>
+    
+    <summary type="html">
+    
+      doshboard
+    
+    </summary>
+    
+    
+      <category term="doshboard" scheme="https://dongyanzhe.github.io/categories/doshboard/"/>
+    
+    
+      <category term="doshboard" scheme="https://dongyanzhe.github.io/tags/doshboard/"/>
+    
+  </entry>
+  
 </feed>
