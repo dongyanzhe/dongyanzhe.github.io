@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://dongyanzhe.github.io/"/>
-  <updated>2020-08-09T11:40:43.079Z</updated>
+  <updated>2020-08-21T04:35:02.394Z</updated>
   <id>https://dongyanzhe.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://dongyanzhe.github.io/2020/08/21/kreplicaset-daemonset/"/>
+    <id>https://dongyanzhe.github.io/2020/08/21/kreplicaset-daemonset/</id>
+    <published>2020-08-21T04:35:02.390Z</published>
+    <updated>2020-08-21T04:35:02.394Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;ReplicaSet&quot;&gt;&lt;a href=&quot;#ReplicaSet&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Python列表操作</title>
@@ -76,6 +99,27 @@
     
     
       <category term="Python" scheme="https://dongyanzhe.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ReplicaSet，DaemonSet</title>
+    <link href="https://dongyanzhe.github.io/2020/04/01/k8s-replicaset-daemonset/"/>
+    <id>https://dongyanzhe.github.io/2020/04/01/k8s-replicaset-daemonset/</id>
+    <published>2020-03-31T16:00:00.000Z</published>
+    <updated>2020-08-21T04:37:51.981Z</updated>
+    
+    <summary type="html">
+    
+      Rs，Ds
+    
+    </summary>
+    
+    
+      <category term="资源对象" scheme="https://dongyanzhe.github.io/categories/%E8%B5%84%E6%BA%90%E5%AF%B9%E8%B1%A1/"/>
+    
+    
+      <category term="k8s集群" scheme="https://dongyanzhe.github.io/tags/k8s%E9%9B%86%E7%BE%A4/"/>
     
   </entry>
   
