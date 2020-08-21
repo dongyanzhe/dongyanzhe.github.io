@@ -80,6 +80,27 @@
   </entry>
   
   <entry>
+    <title>pod资源对象</title>
+    <link href="https://dongyanzhe.github.io/2020/03/23/k8s-pod-zi-yuan-dui-xiang/"/>
+    <id>https://dongyanzhe.github.io/2020/03/23/k8s-pod-zi-yuan-dui-xiang/</id>
+    <published>2020-03-22T16:00:00.000Z</published>
+    <updated>2020-08-21T04:26:53.227Z</updated>
+    
+    <summary type="html">
+    
+      pod资源对象
+    
+    </summary>
+    
+    
+      <category term="资源对象" scheme="https://dongyanzhe.github.io/categories/%E8%B5%84%E6%BA%90%E5%AF%B9%E8%B1%A1/"/>
+    
+    
+      <category term="k8s集群" scheme="https://dongyanzhe.github.io/tags/k8s%E9%9B%86%E7%BE%A4/"/>
+    
+  </entry>
+  
+  <entry>
     <title>helm入门</title>
     <link href="https://dongyanzhe.github.io/2020/03/21/k8s-helm-ru-men/"/>
     <id>https://dongyanzhe.github.io/2020/03/21/k8s-helm-ru-men/</id>

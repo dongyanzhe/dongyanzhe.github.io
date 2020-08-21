@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签, 欢迎来到故瑾的博客">
+    <meta name="keywords" content="分类: 资源对象, 欢迎来到故瑾的博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签 | 欢迎来到故瑾的博客</title>
+    <title>分类: 资源对象 | 欢迎来到故瑾的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -352,64 +352,116 @@
 
     
 
-<div id="tags" class="container chip-container">
+<div id="category-cloud" class="container chip-container">
     <div class="card">
         <div class="card-content">
             <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
             </div>
             <div class="tag-chips">
                 
                 
-                <a href="/tags/Python/" title="Python: 3">
+                
+                <a href="/categories/Python/" title="Python: 3">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Python" style="background-color: #F9EBEA;">Python
+                            style="background-color: #F9EBEA;">Python
                         <span class="tag-length">3</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/k8s%E9%9B%86%E7%BE%A4/" title="k8s集群: 3">
+                <a href="/categories/helm/" title="helm: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="k8s集群" style="background-color: #F5EEF8;">k8s集群
-                        <span class="tag-length">3</span>
+                            style="background-color: #F5EEF8;">helm
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
+                
+                
+                <a href="/categories/%E8%B5%84%E6%BA%90%E5%AF%B9%E8%B1%A1/" title="资源对象: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            style="background-color: #D5F5E3;">资源对象
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/doshboard/" title="doshboard: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #E8F8F5;">doshboard
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
                 
             </div>
         </div>
     </div>
 </div>
 
-    
-    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-wordcloud" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
-<script type="text/javascript">
-    
-
-    $('#tag-wordcloud').jQCloud([{"text":"Python","weight":3,"link":"/tags/Python/"},{"text":"k8s集群","weight":3,"link":"/tags/k8s集群/"}], {
-        autoResize: true
-    });
-</script>
 
     
 
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2020/03/23/k8s-pod-zi-yuan-dui-xiang/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="pod资源对象">
+                            
+                            <span class="card-title">pod资源对象</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Deployment、Service、Pod是k8s最核心的三个资源对象。
+Deployment：最常见的无状态应用的控制器，支持应用的扩缩容、滚动更新等操作。
+Service：为弹性变动且存在生命周期的Pod对象提供了一个固定的访问接口，
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-23
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E8%B5%84%E6%BA%90%E5%AF%B9%E8%B1%A1/" class="post-category">
+                                    资源对象
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/k8s%E9%9B%86%E7%BE%A4/">
+                            <span class="chip bg-color">k8s集群</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
+
 
 
     <footer class="page-footer bg-color">
